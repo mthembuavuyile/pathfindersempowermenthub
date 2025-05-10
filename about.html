@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pathfinders Empowerment Hub | Empowering South African Youth</title>
+    
+    <style>
+        :root {
+            --maroon: #800000;
+            --black: #181818;
+            --white: #fff;
+            --gray: #faf9fa;
+            --light-maroon: rgba(128, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background: var(--gray);
+            color: var(--black);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--maroon);
+            margin: 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--maroon);
+        }
+        
+        .nav-links .active {
+            color: var(--maroon);
+            font-weight: 600;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--maroon);
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: var(--maroon);
+            margin: 0.5rem auto 0;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .mission, .vision {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .mission h3, .vision h3 {
+            font-size: 1.5rem;
+            color: var(--maroon);
+            margin-bottom: 1rem;
+        }
+        
+        .mission i, .vision i {
+            font-size: 3rem;
+            color: var(--maroon);
+            margin-bottom: 1.5rem;
+        }
+        
+        .strategic-pillars {
+            background-color: var(--light-maroon);
+        }
+        
+        .pillars-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pillar {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .pillar:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pillar i {
+            font-size: 3rem;
+            color: var(--maroon);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pillar h3 {
+            font-size: 1.5rem;
+            color: var(--maroon);
+            margin-bottom: 1rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 1.5rem;
+        }
+        
+        .team-info h3 {
+            font-size: 1.3rem;
+            color: var(--maroon);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-info p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .department {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .department h3 {
+            font-size: 1.3rem;
+            color: var(--maroon);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .department h3 i {
+            margin-right: 10px;
+        }
+        
+        .department ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+        
+        .department li {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-about h3, .footer-links h3, .footer-contact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .footer-about h3::after, .footer-links h3::after, .footer-contact h3::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--maroon);
+            margin-top: 0.5rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            color: var(--white);
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--maroon);
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--maroon);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--maroon);
+            border-radius: 50%;
+            color: var(--white);
+            margin-right: 1rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                background-color: var(--white);
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+                padding: 0.5rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero {
+                height: 50vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="./assets/images/pathfinders-logo.jpg" alt="Pathfinders Logo">
+                    <h1>Pathfinders Empowerment Hub</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Pathfinders Empowerment Hub</h1>
+            <p>Empowering South African youth to become leaders, innovators, and changemakers who uplift their communities.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+            </div>
+            <p>Pathfinders Empowerment Hub was founded with a clear vision: to bridge the gap between potential and success for South African youth. We recognized that many talented young people across our nation lack the guidance, skills, and opportunities needed to fully realize their capabilities.</p>
+            <p>Our initiative specifically targets Grade 11-12 learners and first-year university students, equipping them with the tools, skills, and networks they need to thrive in a rapidly changing world. By focusing on this critical transition period, we aim to intervene at a pivotal moment where proper guidance can significantly impact life trajectories.</p>
+            <p>Started by passionate educators and community leaders, Pathfinders has grown from a small mentorship program in Durban to an expanding youth development initiative with ambitious plans to reach across KwaZulu-Natal and beyond.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="mission-vision">
+                <div class="mission">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To empower South African youth with practical skills, values-based leadership, and entrepreneurial mindsets that prepare them for success in education, career, and community service.</p>
+                </div>
+                <div class="vision">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To create a generation of leaders, innovators, and changemakers who transform their communities and contribute to a prosperous South Africa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="strategic-pillars section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Strategic Pillars</h2>
+            </div>
+            <div class="pillars-container">
+                <div class="pillar">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Entrepreneurship & Innovation</h3>
+                    <p>We foster entrepreneurial thinking, provide practical business skills, and nurture innovative solutions to community challenges. Through workshops, mentorship, and hands-on projects, participants learn to identify opportunities and develop sustainable ventures.</p>
+                </div>
+                <div class="pillar">
+                    <i class="fas fa-users"></i>
+                    <h3>Personal Development & Leadership</h3>
+                    <p>We cultivate values-driven leadership, emotional intelligence, and effective communication skills. Our programs emphasize character development, ethical decision-making, and the ability to inspire and mobilize others toward positive change.</p>
+                </div>
+                <div class="pillar">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Academic Excellence & Career Readiness</h3>
+                    <p>We support educational achievement through tutoring, study skills development, and career guidance. Participants receive assistance with university applications, interview preparation, and building professional networks to ensure a successful transition to higher education and employment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Approach</h2>
+            </div>
+            <p>Pathfinders Empowerment Hub operates through a unique blend of school-based programs, community workshops, and mentorship initiatives. We believe in learning by doing, and our approach emphasizes:</p>
+            <br>
+            <ul>
+                <li><strong>Practical Skill Development:</strong> Moving beyond theory to hands-on application of concepts</li>
+                <li><strong>Mentorship:</strong> Connecting youth with experienced professionals and role models</li>
+                <li><strong>Community Engagement:</strong> Applying new skills to address real community needs</li>
+                <li><strong>Holistic Development:</strong> Nurturing intellectual, emotional, and social growth</li>
+                <li><strong>Sustainable Impact:</strong> Creating ongoing support systems that foster long-term success</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Organizational Structure</h2>
+            </div>
+            <div class="departments">
+                <div class="department">
+                    <h3><i class="fas fa-chart-line"></i> Financial Management</h3>
+                    <p>Our Financial Management department ensures stability, transparency, and sustainability of all Pathfinders operations.</p>
+                    <ul>
+                        <li>Fundraising and grants acquisition</li>
+                        <li>Budgeting and resource allocation</li>
+                        <li>Financial record-keeping and accountability</li>
+                        <li>Long-term monetization strategies</li>
+                    </ul>
+                </div>
+                <div class="department">
+                    <h3><i class="fas fa-sitemap"></i> General Management</h3>
+                    <p>The General Management department guides our overall vision, structure, and compliance with organizational goals.</p>
+                    <ul>
+                        <li>Strategic planning and growth</li>
+                        <li>Legal registration and policy governance</li>
+                        <li>Team leadership and stakeholder engagement</li>
+                        <li>Oversight of all programs and departments</li>
+                    </ul>
+                </div>
+                <div class="department">
+                    <h3><i class="fas fa-cogs"></i> Operations Management</h3>
+                    <p>Our Operations team ensures effective delivery of all programs and handles the logistics of our initiatives.</p>
+                    <ul>
+                        <li>Program design and execution</li>
+                        <li>School and community engagement</li>
+                        <li>Event and workshop logistics</li>
+                        <li>Monitoring and evaluation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Asanda Mthethwa">
+                    <div class="team-info">
+                        <h3>Asanda Mthethwa</h3>
+                        <p>Founder & Operations Lead</p>
+                        <p>Passionate educator with extensive experience in youth development and community engagement.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Mr. A">
+                    <div class="team-info">
+                        <h3>Mr. A</h3>
+                        <p>Branding & Digital Strategy</p>
+                        <p>Creative professional focused on building the Pathfinders brand and digital presence.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Team Member">
+                    <div class="team-info">
+                        <h3>Leadership Team</h3>
+                        <p>Program Coordinators</p>
+                        <p>Dedicated professionals and volunteers who coordinate and deliver our various programs.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/250/250" alt="Mentors">
+                    <div class="team-info">
+                        <h3>Mentors Network</h3>
+                        <p>Professional Volunteers</p>
+                        <p>Industry professionals who provide guidance and expertise to our program participants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Strategic Execution Plan</h2>
+            </div>
+            <p>Pathfinders is currently implementing a phased approach to growth and impact:</p>
+            <br>
+            <ol>
+                <li><strong>Engage Schools & Stakeholders:</strong> Building formal partnerships with educational institutions such as Fundokuhle and Thornhill.</li>
+                <li><strong>Refine & Pilot Programs:</strong> Launching test runs of our core initiatives, gathering feedback, and continuously improving our offerings.</li>
+                <li><strong>Secure Funding:</strong> Developing sustainable funding mechanisms through grants, sponsorships, and strategic partnerships.</li>
+                <li><strong>Brand Development:</strong> Building our online presence and storytelling capacity to share our impact with wider audiences.</li>
+                <li><strong>Legal & Structural Setup:</strong> Formalizing our organization through proper registration and establishment of leadership structures.</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Pathfinders</h3>
+                    <p>Empowering South African youth to become leaders, innovators, and changemakers who uplift their communities.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Durban & Pietermaritzburg, KwaZulu-Natal, South Africa</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@pathfindersempowerment.co.za</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>+27 XX XXX XXXX</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pathfinders Empowerment Hub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+        });
+    </script>
+</body>
+</html>
