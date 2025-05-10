@@ -1,429 +1,683 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Pathfinders Empowerment Hub | Empowering South African Youth</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Pathfinders Empowerment Hub</title>
     
+    <meta name="google-site-verification" content="KsutGRpZTLUDbWp5Ro6oUx0S_MNJWlFWjwb6RgHYh18" />
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Learn about Pathfinders Empowerment Hub's mission, vision, and approach to empowering South African youth through leadership, entrepreneurship, and academic excellence." />
+    <meta name="keywords" content="Pathfinders About, Youth Empowerment, South Africa, Leadership Training, Entrepreneurship, Academic Support, Personal Growth, Youth Development Programs, Asanda Mthethwa" />
+    <meta name="author" content="Pathfinders Empowerment Hub" />
+    <meta name="robots" content="index, follow" />
+  
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pathfindersempowerment.co.za/about.html" />
+    <meta property="og:title" content="About Us | Pathfinders Empowerment Hub" />
+    <meta property="og:description" content="Discover how Pathfinders Empowerment Hub is empowering South African youth to become leaders, innovators, and changemakers who uplift their communities." />
+    <meta property="og:image" content="https://pathfindersempowerment.co.za/assets/images/pathfinders-logo.jpg" />
+  
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://pathfindersempowerment.co.za/about.html" />
+    <meta name="twitter:title" content="About Us | Pathfinders Empowerment Hub" />
+    <meta name="twitter:description" content="Discover our story, mission, vision, and strategic approach to youth empowerment in South Africa." />
+    <meta name="twitter:image" content="https://pathfindersempowerment.co.za/assets/images/pathfinders-logo.jpg" />
+  
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/pathfinders-logo.jpg" type="image/jpeg" />
+  
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pathfindersempowerment.co.za/about.html" />
+  
+    <!-- CSS -->
     <style>
-        :root {
-            --maroon: #800000;
-            --black: #181818;
-            --white: #fff;
-            --gray: #faf9fa;
-            --light-maroon: rgba(128, 0, 0, 0.1);
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Montserrat', Arial, sans-serif;
-            margin: 0;
-            background: var(--gray);
-            color: var(--black);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .section-padding {
-            padding: 5rem 0;
-        }
-        
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo h1 {
-            font-size: 1.5rem;
-            color: var(--maroon);
-            margin: 0;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--black);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--maroon);
-        }
-        
-        .nav-links .active {
-            color: var(--maroon);
-            font-weight: 600;
-        }
-        
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            margin-top: 80px;
-        }
-        
-        .hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--maroon);
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 3px;
-            background-color: var(--maroon);
-            margin: 0.5rem auto 0;
-        }
-        
-        .mission-vision {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .mission, .vision {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .mission h3, .vision h3 {
-            font-size: 1.5rem;
-            color: var(--maroon);
-            margin-bottom: 1rem;
-        }
-        
-        .mission i, .vision i {
-            font-size: 3rem;
-            color: var(--maroon);
-            margin-bottom: 1.5rem;
-        }
-        
-        .strategic-pillars {
-            background-color: var(--light-maroon);
-        }
-        
-        .pillars-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .pillar {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .pillar:hover {
-            transform: translateY(-10px);
-        }
-        
-        .pillar i {
-            font-size: 3rem;
-            color: var(--maroon);
-            margin-bottom: 1.5rem;
-        }
-        
-        .pillar h3 {
-            font-size: 1.5rem;
-            color: var(--maroon);
-            margin-bottom: 1rem;
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .team-member {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .team-member img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        .team-info {
-            padding: 1.5rem;
-        }
-        
-        .team-info h3 {
-            font-size: 1.3rem;
-            color: var(--maroon);
-            margin-bottom: 0.5rem;
-        }
-        
-        .team-info p {
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .departments {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .department {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .department h3 {
-            font-size: 1.3rem;
-            color: var(--maroon);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .department h3 i {
-            margin-right: 10px;
-        }
-        
-        .department ul {
-            list-style-position: inside;
-            margin-top: 1rem;
-        }
-        
-        .department li {
-            margin-bottom: 0.5rem;
-        }
-        
-        footer {
-            background-color: var(--black);
-            color: var(--white);
-            padding: 3rem 0;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .footer-about h3, .footer-links h3, .footer-contact h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        .footer-about h3::after, .footer-links h3::after, .footer-contact h3::after {
-            content: "";
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--maroon);
-            margin-top: 0.5rem;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-links a {
-            text-decoration: none;
-            color: var(--white);
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--maroon);
-        }
-        
-        .contact-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-info i {
-            margin-right: 10px;
-            color: var(--maroon);
-        }
-        
-        .social-links {
-            display: flex;
-            margin-top: 1.5rem;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--maroon);
-            border-radius: 50%;
-            color: var(--white);
-            margin-right: 1rem;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        @media screen and (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                background-color: var(--white);
-                padding: 1rem 0;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                text-align: center;
-                padding: 0.5rem 0;
-            }
-            
-            .hamburger {
-                display: block;
-            }
-            
-            .hero {
-                height: 50vh;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-content p {
-                font-size: 1rem;
-            }
-        }
+    :root {
+      --maroon: #800000;
+      --black: #181818;
+      --white: #fff;
+      --gray: #faf9fa;
+      --light-maroon: rgba(128, 0, 0, 0.1);
+    }
+    
+    * { 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: var(--gray);
+      color: var(--black);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    
+    /* Utility Classes */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .section-padding {
+      padding: 5rem 0;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      color: var(--maroon);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 50px;
+      height: 4px;
+      background-color: var(--maroon);
+    }
+    
+    /* Header */
+    .header {
+      background: linear-gradient(to right, rgba(128, 0, 0, 0.95), rgba(128, 0, 0, 0.8)), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0 0h100v100H0z" fill="%23800000"/></svg>');
+      background-size: cover;
+      color: var(--white);
+      padding: 6rem 0 4rem;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    
+    .header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header p {
+      font-size: 1.4rem;
+      font-weight: 300;
+      max-width: 700px;
+      margin: 0 auto;
+      letter-spacing: 1px;
+    }
+    
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 0 1rem;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--black);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .logo-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    
+    .nav-links li a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      padding: 0.5rem 0;
+    }
+    
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--maroon);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+      color: var(--maroon);
+    }
+    
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Main Content Sections */
+    .content-section {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+      padding: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .section-text {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Story Section */
+    .story-section p {
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Mission & Vision */
+    .mission-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .mission, .vision {
+      background: linear-gradient(to bottom right, var(--white), var(--gray));
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid var(--maroon);
+      height: 100%;
+    }
+    
+    .mission h3, .vision h3 {
+      color: var(--maroon);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .mission i, .vision i {
+      color: var(--maroon);
+    }
+    
+    /* Strategic Pillars */
+    .pillars-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .pillar {
+      background: linear-gradient(to bottom right, var(--white), var(--gray));
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid var(--maroon);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .pillar:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pillar h3 {
+      color: var(--maroon);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .pillar i {
+      color: var(--maroon);
+    }
+    
+    /* Approach */
+    .approach-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    
+    .approach-list li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .approach-list li::before {
+      content: "•";
+      color: var(--maroon);
+      font-weight: bold;
+      position: absolute;
+      left: 0.5rem;
+      font-size: 1.5rem;
+    }
+    
+    /* Organizational Structure */
+    .departments {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .department {
+      background: linear-gradient(to bottom right, var(--white), var(--gray));
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid var(--maroon);
+    }
+    
+    .department h3 {
+      color: var(--maroon);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .department i {
+      color: var(--maroon);
+    }
+    
+    .department ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    
+    .department li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .department li::before {
+      content: "•";
+      color: var(--maroon);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Team Section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    
+    .team-member {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .team-member img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .team-info {
+      padding: 1.5rem;
+    }
+    
+    .team-info h3 {
+      color: var(--maroon);
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-info p:first-of-type {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Strategic Plan */
+    .strategic-plan-list {
+      counter-reset: plan-counter;
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    
+    .strategic-plan-list li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2.5rem;
+    }
+    
+    .strategic-plan-list li::before {
+      counter-increment: plan-counter;
+      content: counter(plan-counter);
+      color: var(--white);
+      background-color: var(--maroon);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-about, .footer-links, .footer-contact {
+      margin-bottom: 2rem;
+    }
+    
+    .footer-about h3, .footer-links h3, .footer-contact h3 {
+      color: var(--maroon);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    .footer-about h3::after, .footer-links h3::after, .footer-contact h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: var(--maroon);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-links ul li a {
+      color: var(--white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-links ul li a:hover {
+      color: var(--maroon);
+      padding-left: 5px;
+    }
+    
+    .contact-info {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-info i {
+      margin-right: 1rem;
+      color: var(--maroon);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background-color: var(--maroon);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--maroon);
+      color: var(--white);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: #a00000;
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 992px) {
+      .section-padding {
+        padding: 4rem 0;
+      }
+      
+      .header h1 {
+        font-size: 2.8rem;
+      }
+      
+      .mission-vision {
+        grid-template-columns: 1fr;
+      }
+      
+      .content-section {
+        padding: 2rem;
+      }
+      
+      .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .mobile-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        background: var(--black);
+        align-items: center;
+        padding: 2rem 0;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .nav-links.active {
+        left: 0;
+      }
+      
+      .header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .header p {
+        font-size: 1.1rem;
+      }
+      
+      .section-title {
+        font-size: 1.7rem;
+      }
+      
+      .pillars-container, .departments {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media screen and (max-width: 576px) {
+      .header {
+        padding: 4rem 0 3rem;
+      }
+      
+      .header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+      
+      .content-section {
+        padding: 1.5rem;
+      }
+      
+      .pillar, .department {
+        padding: 1.5rem;
+      }
+      
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
     </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="./assets/images/pathfinders-logo.jpg" alt="Pathfinders Logo">
-                    <h1>Pathfinders Empowerment Hub</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="get-involved.html">Get Involved</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
+  </head>
+  
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <img src="/api/placeholder/40/40" alt="Pathfinders Empowerment Hub Logo" class="logo-image">
+          Pathfinders
+        </a>
+        <button class="mobile-toggle">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Our Programs</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>About Pathfinders Empowerment Hub</h1>
+            <p>Empowering South African youth to become leaders, innovators, and changemakers who uplift their communities.</p>
+          </div>
+        </section>
+      </div>
     </header>
 
     <section class="hero">
