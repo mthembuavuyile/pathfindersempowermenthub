@@ -6,11 +6,19 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://pathfindersempowerment.co.za/</loc>
   <lastmod>2025-05-03T13:17:00+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://pathfindersempowerment.co.za/about.html</loc>
+  <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://pathfindersempowerment.co.za/get-involved.html</loc>
+  <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+</url>
 
 </urlset>
