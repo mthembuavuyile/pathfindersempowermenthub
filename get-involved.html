@@ -706,57 +706,46 @@
       </div>
 
       <!-- Payment Method Dropdown -->
-      <div class="payment-dropdown">
-        <label for="payment-method"><strong>Choose Your Preferred Payment Method:</strong></label>
-        <select id="payment-method" class="dropdown-select">
-          <option value="">Select Payment Method</option>
-          <option value="bank">Bank Transfer</option>
-          <option value="paypal">PayPal</option>
-          <option value="bitcoin">Bitcoin</option>
-          <option value="ethereum">Ethereum</option>
-        </select>
-      </div>
+<div class="payment-dropdown">
+  <label for="payment-method"><strong>Choose Your Preferred Payment Method:</strong></label>
+  <select id="payment-method" class="dropdown-select">
+    <option value="">Select Payment Method</option>
+    <option value="bank">Bank Transfer (Coming Soon)</option>
+    <option value="paypal">PayPal (Coming Soon)</option>
+    <option value="bitcoin">Bitcoin (Coming Soon)</option>
+    <option value="ethereum">Ethereum (Coming Soon)</option>
+  </select>
+</div>
 
-      <!-- Payment Method Details -->
-      <div id="bank-details" class="payment-method-details">
-        <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fas fa-university"></i> Bank Transfer Details</h4>
-        <div class="payment-details">
-          <strong>Bank:</strong> First National Bank (FNB)<br>
-          <strong>Account Name:</strong> Pathfinders Empowerment Hub<br>
-          <strong>Account Number:</strong> 1234567890<br>
-          <strong>Branch Code:</strong> 250655<br>
-          <strong>Account Type:</strong> Current Account<br>
-          <button class="copy-btn" onclick="copyToClipboard('1234567890')">Copy Account Number</button>
-        </div>
-      </div>
+<!-- Payment Method Details (Placeholders) -->
+<div id="bank-details" class="payment-method-details">
+  <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fas fa-university"></i> Bank Transfer Details</h4>
+  <div class="payment-details">
+    <p><em>Bank transfer details will be available soon. Please check back later.</em></p>
+  </div>
+</div>
 
-      <div id="paypal-details" class="payment-method-details">
-        <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fab fa-paypal"></i> PayPal</h4>
-        <div class="payment-details">
-          <strong>PayPal Email:</strong> donate@pathfindersempowerment.co.za<br>
-          <strong>PayPal.Me Link:</strong> <a href="https://paypal.me/pathfindershub" target="_blank" style="color: var(--maroon);">paypal.me/pathfindershub</a><br>
-          <button class="copy-btn" onclick="copyToClipboard('donate@pathfindersempowerment.co.za')">Copy Email</button>
-        </div>
-      </div>
+<div id="paypal-details" class="payment-method-details">
+  <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fab fa-paypal"></i> PayPal</h4>
+  <div class="payment-details">
+    <p><em>PayPal payment option will be activated shortly. Stay tuned!</em></p>
+  </div>
+</div>
 
-      <div id="bitcoin-details" class="payment-method-details">
-        <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fab fa-bitcoin"></i> Bitcoin</h4>
-        <div class="payment-details">
-          <strong>Bitcoin Address:</strong><br>
-          <span style="font-family: monospace; font-size: 0.9rem;">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</span><br>
-          <button class="copy-btn" onclick="copyToClipboard('bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh')">Copy Address</button>
-        </div>
-      </div>
+<div id="bitcoin-details" class="payment-method-details">
+  <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fab fa-bitcoin"></i> Bitcoin</h4>
+  <div class="payment-details">
+    <p><em>Bitcoin wallet address is not yet live. Please come back later.</em></p>
+  </div>
+</div>
 
-      <div id="ethereum-details" class="payment-method-details">
-        <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fab fa-ethereum"></i> Ethereum</h4>
-        <div class="payment-details">
-          <strong>Ethereum Address:</strong><br>
-          <span style="font-family: monospace; font-size: 0.9rem;">0x742d35Cc6640C41c04Fba986f8E8Be845d3b8F8C</span><br>
-          <button class="copy-btn" onclick="copyToClipboard('0x742d35Cc6640C41c04Fba986f8E8Be845d3b8F8C')">Copy Address</button>
-        </div>
-      </div>
-    </section>
+<div id="ethereum-details" class="payment-method-details">
+  <h4 style="color: var(--maroon); margin-bottom: 1rem;"><i class="fab fa-ethereum"></i> Ethereum</h4>
+  <div class="payment-details">
+    <p><em>Ethereum payment method is under preparation. Details will be shared soon.</em></p>
+  </div>
+</div>
+</section>
 
     <!-- Partner Section -->
     <section id="partner" class="content-section">
