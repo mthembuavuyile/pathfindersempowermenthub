@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -317,51 +316,7 @@
       font-size: 1.5rem;
     }
     
-    /* Organizational Structure */
-    .departments {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
     
-    .department {
-      background: linear-gradient(to bottom right, var(--white), var(--gray));
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      border-left: 5px solid var(--maroon);
-    }
-    
-    .department h3 {
-      color: var(--maroon);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-    
-    .department i {
-      color: var(--maroon);
-    }
-    
-    .department ul {
-      list-style: none;
-      margin-top: 1rem;
-    }
-    
-    .department li {
-      margin-bottom: 0.5rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    .department li::before {
-      content: "•";
-      color: var(--maroon);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
     
     /* Team Section */
     .team-grid {
@@ -471,6 +426,7 @@
     
     .footer-links ul {
       list-style: none;
+      color: var(--black);
     }
     
     .footer-links ul li {
@@ -478,7 +434,7 @@
     }
     
     .footer-links ul li a {
-      color: var(--white);
+      color: var(--black);
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -513,7 +469,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
+      color: var(--maroon);
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -757,45 +713,7 @@
         </div>
     </section>
 
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Organizational Structure</h2>
-            </div>
-            <div class="departments">
-                <div class="department">
-                    <h3><i class="fas fa-chart-line"></i> Financial Management</h3>
-                    <p>Our Financial Management department ensures stability, transparency, and sustainability of all Pathfinders operations.</p>
-                    <ul>
-                        <li>Fundraising and grants acquisition</li>
-                        <li>Budgeting and resource allocation</li>
-                        <li>Financial record-keeping and accountability</li>
-                        <li>Long-term monetization strategies</li>
-                    </ul>
-                </div>
-                <div class="department">
-                    <h3><i class="fas fa-sitemap"></i> General Management</h3>
-                    <p>The General Management department guides our overall vision, structure, and compliance with organizational goals.</p>
-                    <ul>
-                        <li>Strategic planning and growth</li>
-                        <li>Legal registration and policy governance</li>
-                        <li>Team leadership and stakeholder engagement</li>
-                        <li>Oversight of all programs and departments</li>
-                    </ul>
-                </div>
-                <div class="department">
-                    <h3><i class="fas fa-cogs"></i> Operations Management</h3>
-                    <p>Our Operations team ensures effective delivery of all programs and handles the logistics of our initiatives.</p>
-                    <ul>
-                        <li>Program design and execution</li>
-                        <li>School and community engagement</li>
-                        <li>Event and workshop logistics</li>
-                        <li>Monitoring and evaluation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section class="section-padding">
         <div class="container">
@@ -885,7 +803,7 @@
                     </div>
                     <div class="contact-info">
                         <i class="fas fa-phone"></i>
-                        <p>+27 XX XXX XXXX</p>
+                        <p>+27 64 878 4287</p>
                     </div>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -895,8 +813,11 @@
                     </div>
                 </div>
             </div>
+            <br>
             <div class="copyright">
                 <p>&copy; 2025 Pathfinders Empowerment Hub. All Rights Reserved.</p>
+                <p>Developed by Vylex Nexys</p>
+                <br>
             </div>
         </div>
     </footer>
