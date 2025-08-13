@@ -1,177 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pathfinders Education Program | Subject Tutoring & Academic Support</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pathfinders Education Program | Affordable Tutoring for South African Learners</title>
+  
+  <!-- SEO Meta Description -->
+  <meta name="description" content="Pathfinders Education Program offers affordable tutoring for South African learners. Connect with experienced tutors, improve grades, and excel in subjects like Maths, Science, English, and more.">
+  
+  <!-- Keywords -->
+  <meta name="keywords" content="South Africa tutoring, affordable tutoring, Pathfinders Education, online tutoring, subject tutoring, high school tutoring, primary school tutoring, maths tutor, science tutor, English tutor, South African learners">
+  
+  <!-- Author -->
+  <meta name="author" content="Pathfinders Empowerment Institute">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Pathfinders Education Program | Affordable Tutoring for South African Learners">
+  <meta property="og:description" content="Affordable, quality tutoring for learners across South Africa. Join the Pathfinders Education Program today and improve your academic performance.">
+  <meta property="og:image" content="https://pathfindersempowerment.co.za/images/education-cover.jpg">
+  <meta property="og:url" content="https://pathfindersempowerment.co.za/education">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pathfinders Education Program | Affordable Tutoring for South African Learners">
+  <meta name="twitter:description" content="Affordable, quality tutoring for learners across South Africa. Join the Pathfinders Education Program today and improve your academic performance.">
+  <meta name="twitter:image" content="https://pathfindersempowerment.co.za/images/education-cover.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://pathfindersempowerment.co.za/images/favicon.png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Pathfinders Education Program",
+    "url": "https://pathfindersempowerment.co.za/education",
+    "logo": "https://pathfindersempowerment.co.za/images/logo.png",
+    "description": "Affordable tutoring services for South African learners. Focus on Maths, Science, English, and other key subjects.",
+    "sameAs": [
+      "https://www.facebook.com/pathfindersempowerment",
+      "https://www.instagram.com/pathfindersempowerment"
+    ]
+  }
+  </script>
+
   <style>
+    :root {
+      --maroon: #800000;
+      --black: #181818;
+      --white: #fff;
+      --gray: #faf9fa;
+      --light-maroon: rgba(128, 0, 0, 0.08);
+      --secondary: #333;
+      --success: #28a745;
+      --text-light: #666;
+      --border: #e0e0e0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      background: #faf9fa;
-      color: #181818;
+      background: var(--gray);
+      color: var(--black);
+      line-height: 1.6;
     }
-    header {
-      background: linear-gradient(to right, rgba(128,0,0,0.95), rgba(128,0,0,0.8));
-      padding: 4rem 1rem;
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, rgba(128, 0, 0, 0.92), rgba(128, 0, 0, 0.85)),
+        url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') center/cover no-repeat;
+      color: var(--white);
+      padding: 6rem 2rem 5rem;
       text-align: center;
-      color: white;
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h2 {
-      color: #800000;
-      margin-bottom: 0.5rem;
-    }
-    .info {
-      background: white;
-      border-radius: 10px;
-      padding: 1.5rem;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       margin-bottom: 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
-    ul {
-      list-style: none;
-      padding: 0;
+
+    .header h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
-    ul li::before {
-      content: "✓";
-      color: #800000;
-      margin-right: 0.5rem;
+
+    .header p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.95;
     }
-    .form-section {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: 600;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.3rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button {
-      margin-top: 1.5rem;
-      background: #800000;
-      color: white;
-      border: none;
-      padding: 0.9rem 1.5rem;
-      font-size: 1.1rem;
+
+    .cta-button {
+      display: inline-block;
+      background: var(--white);
+      color: var(--maroon);
+      padding: 1rem 2.5rem;
       border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .cta-button:hover {
+      background: var(--light-maroon);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .main-content {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      margin-bottom: 4rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h2 {
+      color: var(--maroon);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    /* PROGRAM DETAILS */
+    .price-highlight {
+      background: linear-gradient(135deg, var(--light-maroon), #f8f0f0);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 2rem;
+      border: 2px solid var(--maroon);
+    }
+
+    .price-highlight div:first-child {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price-highlight div:last-child {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--maroon);
+    }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .subject-item {
+      background: var(--gray);
+      padding: 1rem 0.8rem;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.3s ease;
       cursor: pointer;
+      border: 2px solid transparent;
     }
-    button:hover {
-      background: #a00000;
+
+    .subject-item:hover {
+      background: var(--light-maroon);
+      color: var(--maroon);
+      border-color: var(--maroon);
+      transform: translateY(-3px);
     }
+
+    .organization-info {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      border-left: 4px solid var(--success);
+    }
+
+    .organization-info p {
+      margin: 0;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+
+    .organization-info p:last-child {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FORM STYLES */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--secondary);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 8px;
+      border: 2px solid var(--border);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--maroon);
+    }
+
+    .form-help {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 0.3rem;
+    }
+
+    .submit-btn {
+      background: #25d366;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn:hover {
+      background: #128c7e;
+      transform: translateY(-2px);
+    }
+
+    .loading {
+      display: none;
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    .loading.show {
+      display: block;
+    }
+
+    @keyframes spin {
+      to { transform: translateY(-50%) rotate(360deg); }
+    }
+
     .contact-info {
       margin-top: 2rem;
-      font-size: 0.95rem;
-      color: #333;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-info h4 {
+      margin-bottom: 1rem;
+      color: var(--maroon);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .contact-item i {
+      margin-right: 0.8rem;
+      color: var(--maroon);
+      width: 20px;
+    }
+
+    /* RESOURCES SECTION */
+    .resources-section {
+      padding: 4rem 0;
+      background: var(--white);
+    }
+
+    .resources-title {
+      color: var(--maroon);
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+    }
+
+    .resources-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .resource-card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--maroon);
+      background: var(--white);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .resource-icon {
+      font-size: 3rem;
+      color: var(--maroon);
+      margin-bottom: 1.5rem;
+    }
+
+    .resource-card h3 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .resource-card p {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .resource-link {
+      display: inline-block;
+      font-weight: 600;
+      color: var(--maroon);
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid var(--maroon);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .resource-link:hover {
+      background: var(--maroon);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .subjects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+      
+      .resources-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Pathfinders Education Program</h1>
+  <header class="header">
+    <h1><i class="fas fa-graduation-cap"></i> Pathfinders Education Program</h1>
     <p>Affordable, quality tutoring for South African learners — building brighter futures together.</p>
+    <a href="#register" class="cta-button">
+      <i class="fas fa-rocket"></i> Start Your Journey
+    </a>
   </header>
 
-  <main>
-    <section class="info">
-      <h2>Let's Learn Together! Build a Bright Future!</h2>
-      <p><strong>Weekly Schedule:</strong> 2 Sessions per Week (Only R50)</p>
-      <h3>Subjects Available:</h3>
-      <ul>
-        <li>Economics</li>
-        <li>Business Studies</li>
-        <li>Geography</li>
-        <li>Accounting</li>
-        <li>Life Sciences</li>
-        <li>Tourism</li>
-      </ul>
-      <p><strong>Organized by:</strong> Pathfinders Empowerment Hub</p>
-      <p><strong>Results-driven. Affordable. Quality Tutoring.</strong></p>
-    </section>
+  <main class="container">
+    <div class="main-content">
+      <!-- Program Information -->
+      <div class="card">
+        <h2><i class="fas fa-star"></i> Program Details</h2>
+        
+        <div class="price-highlight">
+          <div>📚 2 Sessions per Week</div>
+          <div>Only R50 Total!</div>
+        </div>
 
-    <section class="form-section">
-      <h2>Register or Enquire Now</h2>
-      <form id="whatsappForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required/>
+        <h3 style="color: var(--secondary); margin: 1.5rem 0 1rem 0;">
+          <i class="fas fa-book"></i> Available Subjects:
+        </h3>
+        
+        <div class="subjects-grid">
+          <div class="subject-item">💼 Economics</div>
+          <div class="subject-item">📊 Business Studies</div>
+          <div class="subject-item">🌍 Geography</div>
+          <div class="subject-item">🧮 Accounting</div>
+          <div class="subject-item">🔬 Life Sciences</div>
+          <div class="subject-item">✈️ Tourism</div>
+        </div>
 
-        <label for="surname">Surname</label>
-        <input type="text" id="surname" required/>
-
-        <label for="grade">Grade</label>
-        <select id="grade" required>
-          <option value="">Select Grade</option>
-          <option value="Grade 8">Grade 8</option>
-          <option value="Grade 9">Grade 9</option>
-          <option value="Grade 10">Grade 10</option>
-          <option value="Grade 11">Grade 11</option>
-          <option value="Grade 12">Grade 12</option>
-        </select>
-
-        <label for="subjects">Subjects</label>
-        <select id="subjects" multiple required>
-          <option value="Economics">Economics</option>
-          <option value="Business Studies">Business Studies</option>
-          <option value="Geography">Geography</option>
-          <option value="Accounting">Accounting</option>
-          <option value="Life Sciences">Life Sciences</option>
-          <option value="Tourism">Tourism</option>
-        </select>
-
-        <label for="message">Additional Message</label>
-        <textarea id="message" rows="4"></textarea>
-
-        <button type="submit"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
-      </form>
-
-      <div class="contact-info">
-        <p><i class="fas fa-phone"></i> Asanda: 078 328 4393</p>
-        <p><i class="fas fa-envelope"></i> asanda@pathfindersempowerment.co.za</p>
+        <div class="organization-info">
+          <p>
+            <i class="fas fa-handshake" style="color: var(--success); margin-right: 0.5rem;"></i>
+            <strong>Organized by:</strong> Pathfinders Empowerment Hub
+          </p>
+          <p>Results-driven • Affordable • Quality Tutoring</p>
+        </div>
       </div>
-    </section>
+
+      <!-- Registration Form -->
+      <div class="card" id="register">
+        <h2><i class="fas fa-user-plus"></i> Register Now</h2>
+        
+        <form id="whatsappForm">
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> First Name</label>
+            <input type="text" id="name" required placeholder="Enter your first name">
+          </div>
+
+          <div class="form-group">
+            <label for="surname"><i class="fas fa-id-badge"></i> Surname</label>
+            <input type="text" id="surname" required placeholder="Enter your surname">
+          </div>
+
+          <div class="form-group">
+            <label for="grade"><i class="fas fa-school"></i> Grade</label>
+            <select id="grade" required>
+              <option value="">Select your grade</option>
+              <option value="Grade 8">Grade 8</option>
+              <option value="Grade 9">Grade 9</option>
+              <option value="Grade 10">Grade 10</option>
+              <option value="Grade 11">Grade 11</option>
+              <option value="Grade 12">Grade 12</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subjects"><i class="fas fa-books"></i> Subjects</label>
+            <select id="subjects" multiple required>
+              <option value="Economics">Economics</option>
+              <option value="Business Studies">Business Studies</option>
+              <option value="Geography">Geography</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Life Sciences">Life Sciences</option>
+              <option value="Tourism">Tourism</option>
+            </select>
+            <div class="form-help">Hold Ctrl/Cmd to select multiple subjects</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message"><i class="fas fa-comment"></i> Additional Message (Optional)</label>
+            <textarea id="message" rows="3" placeholder="Any questions or special requirements?"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Send via WhatsApp</span>
+            <div class="loading"></div>
+          </button>
+        </form>
+
+        <div class="contact-info">
+          <h4><i class="fas fa-phone-alt"></i> Contact Information</h4>
+          <div class="contact-item">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Asanda: 078 328 4393</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>asanda@pathfindersempowerment.co.za</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <!-- Educational Resources Section -->
+  <section class="resources-section">
+    <div class="container">
+      <h2 class="resources-title">
+        <i class="fas fa-tools"></i> Educational Resources & Support
+      </h2>
+      
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h3>University Applications</h3>
+          <p>Apply to South African universities through the Central Application Office (CAO). Start your higher education journey.</p>
+          <a href="https://cao.ac.za/Apply.aspx?content=Apply" target="_blank" rel="noopener noreferrer" class="resource-link">
+            Apply Now <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h3>NSFAS Funding</h3>
+          <p>Get financial aid for your tertiary education through the National Student Financial Aid Scheme.</p>
+          <a href="https://www.nsfas.org.za/content/" target="_blank" rel="noopener noreferrer" class="resource-link">
+            Learn More <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Study Trust Bursaries</h3>
+          <p>Explore bursary opportunities and scholarships to fund your education and achieve your academic goals.</p>
+          <a href="https://studytrust.org.za/bursary-applications/" target="_blank" rel="noopener noreferrer" class="resource-link">
+            Apply for Bursaries <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Study Guides</h3>
+          <p>Access Mind the Gap study guides and other educational materials to supplement your learning.</p>
+          <a href="https://wcedeportal.co.za/mind-the-gap-study-guides" target="_blank" rel="noopener noreferrer" class="resource-link">
+            Download Guides <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>APS Calculator</h3>
+          <p>Calculate your Admission Point Score (APS) to see which university programs you qualify for.</p>
+          <a href="https://vylexnexys.co.za/edTech/tools/apscalculator.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+            Calculate APS <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Pathfinders Empowerment Hub. Empowering South African learners for a brighter future.</p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('whatsappForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      let name = document.getElementById('name').value.trim();
-      let surname = document.getElementById('surname').value.trim();
-      let grade = document.getElementById('grade').value;
-      let subjects = Array.from(document.getElementById('subjects').selectedOptions).map(opt => opt.value).join(", ");
-      let message = document.getElementById('message').value.trim();
+      
+      // Show loading state
+      const submitBtn = this.querySelector('.submit-btn');
+      const loading = submitBtn.querySelector('.loading');
+      const btnText = submitBtn.querySelector('span');
+      
+      loading.classList.add('show');
+      btnText.textContent = 'Preparing message...';
+      
+      // Get form data
+      const name = document.getElementById('name').value.trim();
+      const surname = document.getElementById('surname').value.trim();
+      const grade = document.getElementById('grade').value;
+      const subjects = Array.from(document.getElementById('subjects').selectedOptions).map(opt => opt.value);
+      const message = document.getElementById('message').value.trim();
 
-      let whatsappNumber = "27783284393"; // Asanda's number in international format
-      let text = `Hello Asanda, I would like to register/enquire.\n\nName: ${name} ${surname}\nGrade: ${grade}\nSubjects: ${subjects}\nMessage: ${message}`;
-      let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      // Validate required fields
+      if (!name || !surname || !grade || subjects.length === 0) {
+        alert('Please fill in all required fields.');
+        loading.classList.remove('show');
+        btnText.textContent = 'Send via WhatsApp';
+        return;
+      }
 
-      window.open(url, '_blank');
+      // Format WhatsApp message
+      const whatsappNumber = "27783284393";
+      let text = `🎓 *Pathfinders Education Program Registration*\n\n`;
+      text += `👤 *Name:* ${name} ${surname}\n`;
+      text += `📚 *Grade:* ${grade}\n`;
+      text += `📖 *Subjects:* ${subjects.join(", ")}\n`;
+      
+      if (message) {
+        text += `💬 *Message:* ${message}\n`;
+      }
+      
+      text += `\nI'm interested in joining the program. Please provide more information! 🚀`;
+
+      // Create WhatsApp URL
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      
+      // Simulate processing delay for better UX
+      setTimeout(() => {
+        window.open(url, '_blank');
+        
+        // Reset button state
+        loading.classList.remove('show');
+        btnText.textContent = 'Send via WhatsApp';
+      }, 1000);
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Subject item click functionality
+    document.querySelectorAll('.subject-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const subjectName = this.textContent.replace(/[^\w\s]/gi, '').trim();
+        const registerForm = document.getElementById('register');
+        registerForm.scrollIntoView({ behavior: 'smooth' });
+        
+        // Highlight the corresponding subject in the form
+        setTimeout(() => {
+          const subjectSelect = document.getElementById('subjects');
+          const options = Array.from(subjectSelect.options);
+          const matchingOption = options.find(opt => opt.value === subjectName);
+          if (matchingOption) {
+            matchingOption.selected = true;
+            subjectSelect.focus();
+          }
+        }, 500);
+      });
     });
   </script>
 </body>
