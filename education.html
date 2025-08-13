@@ -2,47 +2,37 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Pathfinders Education Program | Affordable Tutoring for South African Learners</title>
-  
-  <!-- SEO Meta Description -->
-  <meta name="description" content="Pathfinders Education Program offers affordable tutoring for South African learners. Connect with experienced tutors, improve grades, and excel in subjects like Maths, Science, English, and more.">
-  
-  <!-- Keywords -->
-  <meta name="keywords" content="South Africa tutoring, affordable tutoring, Pathfinders Education, online tutoring, subject tutoring, high school tutoring, primary school tutoring, maths tutor, science tutor, English tutor, South African learners">
-  
-  <!-- Author -->
-  <meta name="author" content="Pathfinders Empowerment Institute">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Pathfinders Education Program | Affordable Tutoring for South African Learners">
-  <meta property="og:description" content="Affordable, quality tutoring for learners across South Africa. Join the Pathfinders Education Program today and improve your academic performance.">
-  <meta property="og:image" content="https://pathfindersempowerment.co.za/images/education-cover.jpg">
-  <meta property="og:url" content="https://pathfindersempowerment.co.za/education">
-  <meta property="og:type" content="website">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pathfinders Education Program | Affordable Tutoring for South African Learners">
-  <meta name="twitter:description" content="Affordable, quality tutoring for learners across South Africa. Join the Pathfinders Education Program today and improve your academic performance.">
-  <meta name="twitter:image" content="https://pathfindersempowerment.co.za/images/education-cover.jpg">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://pathfindersempowerment.co.za/images/favicon.png">
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- Structured Data: Organization -->
-  <script type="application/ld+json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pathfinders Education Program | Affordable Tutoring for South African Learners</title>
+
+    <!-- SEO Meta Tags (Kept from original) -->
+    <meta name="description"
+        content="Pathfinders Education Program offers affordable tutoring for South African learners. Connect with experienced tutors, improve grades, and excel in subjects like Maths, Science, English, and more.">
+    <meta name="keywords"
+        content="South Africa tutoring, affordable tutoring, Pathfinders Education, online tutoring, subject tutoring, high school tutoring, primary school tutoring, maths tutor, science tutor, English tutor, South African learners">
+    <meta name="author" content="Pathfinders Empowerment Institute">
+    <meta property="og:title" content="Pathfinders Education Program | Affordable Tutoring for South African Learners">
+    <meta property="og:description"
+        content="Affordable, quality tutoring for learners across South Africa. Join the Pathfinders Education Program today and improve your academic performance.">
+    <meta property="og:image" content="https://pathfindersempowerment.co.za/images/education-cover.jpg">
+    <meta property="og:url" content="https://pathfindersempowerment.co.za/education">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pathfinders Education Program | Affordable Tutoring for South African Learners">
+    <meta name="twitter:description"
+        content="Affordable, quality tutoring for learners across South Africa. Join the Pathfinders Education Program today and improve your academic performance.">
+    <meta name="twitter:image" content="https://pathfindersempowerment.co.za/images/education-cover.jpg">
+
+    <!-- Favicon, Fonts, Icons (Kept from original) -->
+    <link rel="icon" type="image/png" href="https://pathfindersempowerment.co.za/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data (Kept from original) -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
@@ -57,646 +47,600 @@
   }
   </script>
 
-  <style>
-    :root {
-      --maroon: #800000;
-      --black: #181818;
-      --white: #fff;
-      --gray: #faf9fa;
-      --light-maroon: rgba(128, 0, 0, 0.08);
-      --secondary: #333;
-      --success: #28a745;
-      --text-light: #666;
-      --border: #e0e0e0;
-    }
+    <style>
+        /* 1. ROOT VARIABLES & GLOBAL RESETS */
+        :root {
+            --maroon: #800000;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-light: #f9f9f9;
+            --gray-medium: #e9e9e9;
+            --gray-dark: #666;
+            --text-primary: #222;
+            --text-secondary: #555;
+            --accent: #25d366;
+            /* WhatsApp Green */
+            --accent-dark: #128c7e;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            --border-radius: 12px;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--gray);
-      color: var(--black);
-      line-height: 1.6;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* HEADER */
-    .header {
-      background: linear-gradient(135deg, rgba(128, 0, 0, 0.92), rgba(128, 0, 0, 0.85)),
-        url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') center/cover no-repeat;
-      color: var(--white);
-      padding: 6rem 2rem 5rem;
-      text-align: center;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      margin-bottom: 2rem;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    .header h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    .header p {
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      max-width: 700px;
-      margin: 0 auto 2.5rem;
-      opacity: 0.95;
-    }
+        /* 2. NAVIGATION BAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    .cta-button {
-      display: inline-block;
-      background: var(--white);
-      color: var(--maroon);
-      padding: 1rem 2.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+        .nav-logo a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--maroon);
+            text-decoration: none;
+        }
 
-    .cta-button:hover {
-      background: var(--light-maroon);
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
+        .nav-logo i {
+            margin-right: 0.5rem;
+        }
 
-    /* MAIN CONTAINER */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
 
-    .main-content {
-      display: grid;
-      gap: 2.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      margin-bottom: 4rem;
-    }
+        .nav-link:hover {
+            background-color: var(--maroon);
+            color: var(--white);
+        }
 
-    .card {
-      background: var(--white);
-      border-radius: 15px;
-      padding: 2.5rem;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        /* 3. MAIN CONTENT (SPLIT SCREEN LAYOUT) */
+        .main-content {
+            display: flex;
+            flex: 1;
+            /* Allows this section to grow and fill available space */
+        }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-    }
+        /* 3.1 INFO PANEL (LEFT SIDE) */
+        .info-panel {
+            flex-basis: 55%;
+            padding: 4rem 5%;
+            background: linear-gradient(rgba(128, 0, 0, 0.85), rgba(40, 0, 0, 0.9)),
+                url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') center/cover no-repeat;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    .card h2 {
-      color: var(--maroon);
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-    }
+        .info-panel h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
 
-    /* PROGRAM DETAILS */
-    .price-highlight {
-      background: linear-gradient(135deg, var(--light-maroon), #f8f0f0);
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      margin-bottom: 2rem;
-      border: 2px solid var(--maroon);
-    }
+        .info-panel .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            max-width: 600px;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+        }
 
-    .price-highlight div:first-child {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
+        .info-panel h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-left: 4px solid var(--white);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .price-highlight div:last-child {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--maroon);
-    }
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
 
-    .subjects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
+        .why-us-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
 
-    .subject-item {
-      background: var(--gray);
-      padding: 1rem 0.8rem;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
+        .why-us-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
 
-    .subject-item:hover {
-      background: var(--light-maroon);
-      color: var(--maroon);
-      border-color: var(--maroon);
-      transform: translateY(-3px);
-    }
+        .why-us-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
 
-    .organization-info {
-      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-top: 2rem;
-      border-left: 4px solid var(--success);
-    }
+        /* 3.2 FORM PANEL (RIGHT SIDE) */
+        .form-panel {
+            flex-basis: 45%;
+            padding: 4rem 5%;
+            background-color: var(--gray-light);
+            overflow-y: auto;
+            /* Allows scrolling on this panel if content overflows */
+        }
 
-    .organization-info p {
-      margin: 0;
-      font-weight: 500;
-      color: var(--secondary);
-    }
+        .form-panel h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--maroon);
+        }
 
-    .organization-info p:last-child {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
+        .form-panel p {
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
 
-    /* FORM STYLES */
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
 
-    .form-group label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--secondary);
-    }
+        .form-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.9rem;
-      border-radius: 8px;
-      border: 2px solid var(--border);
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-    }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--gray-medium);
+            background: var(--white);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--maroon);
-    }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--maroon);
+            box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+        }
 
-    .form-help {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-top: 0.3rem;
-    }
+        .form-help {
+            font-size: 0.8rem;
+            color: var(--gray-dark);
+            margin-top: 0.4rem;
+        }
 
-    .submit-btn {
-      background: #25d366;
-      color: var(--white);
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
+        .submit-btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
 
-    .submit-btn:hover {
-      background: #128c7e;
-      transform: translateY(-2px);
-    }
+        .submit-btn:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
 
-    .loading {
-      display: none;
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-radius: 50%;
-      border-top-color: white;
-      animation: spin 1s ease-in-out infinite;
-    }
+        /* 4. RESOURCES SECTION */
+        .resources-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
 
-    .loading.show {
-      display: block;
-    }
+        .resources-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--maroon);
+            margin-bottom: 3rem;
+        }
 
-    @keyframes spin {
-      to { transform: translateY(-50%) rotate(360deg); }
-    }
+        .resources-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
-    .contact-info {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
+        .resource-card {
+            background: var(--gray-light);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-medium);
+        }
 
-    .contact-info h4 {
-      margin-bottom: 1rem;
-      color: var(--maroon);
-    }
+        .resource-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: var(--maroon);
+        }
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.8rem;
-      font-weight: 500;
-    }
+        /* (Styles for resource-card content are kept from the original as they were good) */
+        .resource-icon {
+            font-size: 3rem;
+            color: var(--maroon);
+            margin-bottom: 1.5rem;
+        }
 
-    .contact-item i {
-      margin-right: 0.8rem;
-      color: var(--maroon);
-      width: 20px;
-    }
+        .resource-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
 
-    /* RESOURCES SECTION */
-    .resources-section {
-      padding: 4rem 0;
-      background: var(--white);
-    }
+        .resource-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
 
-    .resources-title {
-      color: var(--maroon);
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2.2rem;
-    }
+        .resource-link {
+            display: inline-block;
+            font-weight: 600;
+            color: var(--maroon);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--maroon);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
 
-    .resources-grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+        .resource-link:hover {
+            background: var(--maroon);
+            color: var(--white);
+        }
 
-    .resource-card {
-      background: var(--gray);
-      padding: 2rem;
-      border-radius: 15px;
-      text-align: center;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
+        /* 5. FOOTER */
+        .footer {
+            background: var(--black);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem 5%;
+            text-align: center;
+        }
 
-    .resource-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--maroon);
-      background: var(--white);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    }
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    .resource-icon {
-      font-size: 3rem;
-      color: var(--maroon);
-      margin-bottom: 1.5rem;
-    }
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
 
-    .resource-card h3 {
-      color: var(--secondary);
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
+        .footer-links {
+            margin: 1.5rem 0;
+        }
 
-    .resource-card p {
-      color: var(--text-light);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
 
-    .resource-link {
-      display: inline-block;
-      font-weight: 600;
-      color: var(--maroon);
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border: 2px solid var(--maroon);
-      border-radius: 25px;
-      transition: all 0.3s ease;
-    }
+        .footer-links a:hover {
+            color: var(--white);
+        }
 
-    .resource-link:hover {
-      background: var(--maroon);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
+        .footer-socials {
+            margin-bottom: 1.5rem;
+        }
 
-    /* FOOTER */
-    .footer {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-      padding: 2rem;
-    }
+        .footer-socials a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.4rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-    /* RESPONSIVE DESIGN */
-    @media (max-width: 768px) {
-      .main-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      
-      .subjects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      }
-      
-      .resources-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .card {
-        padding: 1.5rem;
-      }
-    }
-  </style>
+        .footer-socials a:hover {
+            color: var(--maroon);
+            transform: translateY(-3px);
+        }
+
+        .footer .copyright {
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        /* 6. RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .info-panel,
+            .form-panel {
+                flex-basis: auto;
+                /* Reset flex-basis */
+            }
+
+            .info-panel {
+                padding: 3rem 5%;
+                text-align: center;
+            }
+
+            .info-panel h2 {
+                border-left: none;
+                padding-left: 0;
+            }
+
+            .form-panel {
+                padding: 3rem 5%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header class="header">
-    <h1><i class="fas fa-graduation-cap"></i> Pathfinders Education Program</h1>
-    <p>Affordable, quality tutoring for South African learners — building brighter futures together.</p>
-    <a href="#register" class="cta-button">
-      <i class="fas fa-rocket"></i> Start Your Journey
-    </a>
-  </header>
 
-  <main class="container">
-    <div class="main-content">
-      <!-- Program Information -->
-      <div class="card">
-        <h2><i class="fas fa-star"></i> Program Details</h2>
-        
-        <div class="price-highlight">
-          <div>📚 2 Sessions per Week</div>
-          <div>Only R50 Total!</div>
-        </div>
+    <div class="page-wrapper">
+        <!-- 1. NAVIGATION BAR with link to Home Page -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                <!-- Make this link point to your main home page (e.g., index.html or your domain root) -->
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i> Pathfinders
+                </a>
+            </div>
+            <!-- This link also points back to the main home page -->
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </nav>
 
-        <h3 style="color: var(--secondary); margin: 1.5rem 0 1rem 0;">
-          <i class="fas fa-book"></i> Available Subjects:
-        </h3>
-        
-        <div class="subjects-grid">
-          <div class="subject-item">💼 Economics</div>
-          <div class="subject-item">📊 Business Studies</div>
-          <div class="subject-item">🌍 Geography</div>
-          <div class="subject-item">🧮 Accounting</div>
-          <div class="subject-item">🔬 Life Sciences</div>
-          <div class="subject-item">✈️ Tourism</div>
-        </div>
+        <!-- 2. MAIN CONTENT AREA (Split Screen) -->
+        <main class="main-content">
 
-        <div class="organization-info">
-          <p>
-            <i class="fas fa-handshake" style="color: var(--success); margin-right: 0.5rem;"></i>
-            <strong>Organized by:</strong> Pathfinders Empowerment Hub
-          </p>
-          <p>Results-driven • Affordable • Quality Tutoring</p>
-        </div>
-      </div>
+            <!-- LEFT SIDE: Information Panel -->
+            <section class="info-panel">
+                <h1>Pathfinders Education Program</h1>
+                <p class="tagline">Affordable, quality tutoring for South African learners — building brighter futures
+                    together.</p>
 
-      <!-- Registration Form -->
-      <div class="card" id="register">
-        <h2><i class="fas fa-user-plus"></i> Register Now</h2>
-        
-        <form id="whatsappForm">
-          <div class="form-group">
-            <label for="name"><i class="fas fa-user"></i> First Name</label>
-            <input type="text" id="name" required placeholder="Enter your first name">
-          </div>
+                <h2>Why Choose Us?</h2>
+                <div class="why-us-grid">
+                    <div class="why-us-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Affordable</h3>
+                        <p>Only R50 for 2 sessions per week.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Quality</h3>
+                        <p>Experienced tutors and results-driven methods.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-handshake-angle"></i>
+                        <h3>Support</h3>
+                        <p>We're invested in your academic success.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="#resources" style="color: white; font-weight: 600;">Explore Educational Resources
+                        &darr;</a>
+                </div>
+            </section>
 
-          <div class="form-group">
-            <label for="surname"><i class="fas fa-id-badge"></i> Surname</label>
-            <input type="text" id="surname" required placeholder="Enter your surname">
-          </div>
+            <!-- RIGHT SIDE: Registration Form Panel -->
+            <section class="form-panel">
+                <h2>Register Now</h2>
+                <p>Fill out the form to start your journey.</p>
 
-          <div class="form-group">
-            <label for="grade"><i class="fas fa-school"></i> Grade</label>
-            <select id="grade" required>
-              <option value="">Select your grade</option>
-              <option value="Grade 8">Grade 8</option>
-              <option value="Grade 9">Grade 9</option>
-              <option value="Grade 10">Grade 10</option>
-              <option value="Grade 11">Grade 11</option>
-              <option value="Grade 12">Grade 12</option>
-            </select>
-          </div>
+                <form id="whatsappForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> First Name</label>
+                        <input type="text" id="name" required placeholder="e.g., Thabo">
+                    </div>
 
-          <div class="form-group">
-            <label for="subjects"><i class="fas fa-books"></i> Subjects</label>
-            <select id="subjects" multiple required>
-              <option value="Economics">Economics</option>
-              <option value="Business Studies">Business Studies</option>
-              <option value="Geography">Geography</option>
-              <option value="Accounting">Accounting</option>
-              <option value="Life Sciences">Life Sciences</option>
-              <option value="Tourism">Tourism</option>
-            </select>
-            <div class="form-help">Hold Ctrl/Cmd to select multiple subjects</div>
-          </div>
+                    <div class="form-group">
+                        <label for="surname"><i class="fas fa-id-badge"></i> Surname</label>
+                        <input type="text" id="surname" required placeholder="e.g., Mbeki">
+                    </div>
 
-          <div class="form-group">
-            <label for="message"><i class="fas fa-comment"></i> Additional Message (Optional)</label>
-            <textarea id="message" rows="3" placeholder="Any questions or special requirements?"></textarea>
-          </div>
+                    <div class="form-group">
+                        <label for="grade"><i class="fas fa-school"></i> Grade</label>
+                        <select id="grade" required>
+                            <option value="" disabled selected>Select your grade</option>
+                            <option value="Grade 8">Grade 8</option>
+                            <option value="Grade 9">Grade 9</option>
+                            <option value="Grade 10">Grade 10</option>
+                            <option value="Grade 11">Grade 11</option>
+                            <option value="Grade 12">Grade 12</option>
+                        </select>
+                    </div>
 
-          <button type="submit" class="submit-btn">
-            <i class="fab fa-whatsapp"></i>
-            <span>Send via WhatsApp</span>
-            <div class="loading"></div>
-          </button>
-        </form>
+                    <div class="form-group">
+                        <label for="subjects"><i class="fas fa-book"></i> Subjects</label>
+                        <select id="subjects" multiple required>
+                            <option value="Economics">Economics</option>
+                            <option value="Business Studies">Business Studies</option>
+                            <option value="Geography">Geography</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Life Sciences">Life Sciences</option>
+                            <option value="Tourism">Tourism</option>
+                        </select>
+                        <div class="form-help">Hold Ctrl/Cmd to select multiple subjects</div>
+                    </div>
 
-        <div class="contact-info">
-          <h4><i class="fas fa-phone-alt"></i> Contact Information</h4>
-          <div class="contact-item">
-            <i class="fas fa-mobile-alt"></i>
-            <span>Asanda: 078 328 4393</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>asanda@pathfindersempowerment.co.za</span>
-          </div>
-        </div>
-      </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Send Registration via WhatsApp</span>
+                    </button>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- 3. EDUCATIONAL RESOURCES SECTION -->
+        <section class="resources-section" id="resources">
+            <div class="container">
+                <h2 class="resources-title">
+                    <i class="fas fa-tools"></i> Educational Resources & Support
+                </h2>
+                <div class="resources-grid">
+                    <!-- Resource Cards are kept the same as they were well-structured -->
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-university"></i></div>
+                        <h3>University Applications</h3>
+                        <p>Apply to South African universities through the Central Application Office (CAO).</p><a
+                            href="https://cao.ac.za/Apply.aspx?content=Apply" target="_blank" rel="noopener noreferrer"
+                            class="resource-link">Apply Now <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3>NSFAS Funding</h3>
+                        <p>Get financial aid for your tertiary education through the National Student Financial Aid
+                            Scheme.</p><a href="https://www.nsfas.org.za/content/" target="_blank"
+                            rel="noopener noreferrer" class="resource-link">Learn More <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Study Trust Bursaries</h3>
+                        <p>Explore bursary opportunities and scholarships to fund your education and achieve your goals.
+                        </p><a href="https://studytrust.org.za/bursary-applications/" target="_blank"
+                            rel="noopener noreferrer" class="resource-link">Find Bursaries <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Study Guides</h3>
+                        <p>Access Mind the Gap study guides and other materials to supplement your learning.</p><a
+                            href="https://wcedeportal.co.za/mind-the-gap-study-guides" target="_blank"
+                            rel="noopener noreferrer" class="resource-link">Download Guides <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>APS Calculator</h3>
+                        <p>Calculate your Admission Point Score (APS) to see which university programs you qualify for.
+                        </p>
+                        <a href="https://vylexnexys.co.za/edTech/tools/apscalculator.html" target="_blank"
+                            rel="noopener noreferrer" class="resource-link">
+                            Calculate APS <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FOOTER with links -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">Pathfinders Empowerment Hub</div>
+                <div class="footer-links">
+                    <!-- Make this point to your home page -->
+                    <a href="index.html">Home</a>
+                    <!-- Add other pages as needed -->
+                    <a href="#">About Us</a>
+                    <a href="mailto:asanda@pathfindersempowerment.co.za">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/pathfindersempowerment" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/pathfindersempowerment" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/27783284393" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="copyright">
+                    &copy; 2024 Pathfinders Empowerment Hub. All Rights Reserved. <br>
+                    Empowering South African learners for a brighter future.
+                </p>
+            </div>
+        </footer>
     </div>
-  </main>
 
-  <!-- Educational Resources Section -->
-  <section class="resources-section">
-    <div class="container">
-      <h2 class="resources-title">
-        <i class="fas fa-tools"></i> Educational Resources & Support
-      </h2>
-      
-      <div class="resources-grid">
-        <div class="resource-card">
-          <div class="resource-icon">
-            <i class="fas fa-university"></i>
-          </div>
-          <h3>University Applications</h3>
-          <p>Apply to South African universities through the Central Application Office (CAO). Start your higher education journey.</p>
-          <a href="https://cao.ac.za/Apply.aspx?content=Apply" target="_blank" rel="noopener noreferrer" class="resource-link">
-            Apply Now <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
+    <script>
+        // The JavaScript for form submission can remain largely the same,
+        // as it was already well-written.
+        document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        <div class="resource-card">
-          <div class="resource-icon">
-            <i class="fas fa-money-bill-wave"></i>
-          </div>
-          <h3>NSFAS Funding</h3>
-          <p>Get financial aid for your tertiary education through the National Student Financial Aid Scheme.</p>
-          <a href="https://www.nsfas.org.za/content/" target="_blank" rel="noopener noreferrer" class="resource-link">
-            Learn More <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
+            const name = document.getElementById('name').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const grade = document.getElementById('grade').value;
+            const subjects = Array.from(document.getElementById('subjects').selectedOptions).map(opt => opt.value);
 
-        <div class="resource-card">
-          <div class="resource-icon">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3>Study Trust Bursaries</h3>
-          <p>Explore bursary opportunities and scholarships to fund your education and achieve your academic goals.</p>
-          <a href="https://studytrust.org.za/bursary-applications/" target="_blank" rel="noopener noreferrer" class="resource-link">
-            Apply for Bursaries <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
+            if (!name || !surname || !grade || subjects.length === 0) {
+                alert('Please fill in all required fields.');
+                return;
+            }
 
-        <div class="resource-card">
-          <div class="resource-icon">
-            <i class="fas fa-book-open"></i>
-          </div>
-          <h3>Study Guides</h3>
-          <p>Access Mind the Gap study guides and other educational materials to supplement your learning.</p>
-          <a href="https://wcedeportal.co.za/mind-the-gap-study-guides" target="_blank" rel="noopener noreferrer" class="resource-link">
-            Download Guides <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
+            const whatsappNumber = "27783284393"; // Asanda's number
+            let text = `🎓 *Pathfinders Education Program Registration*\n\n`;
+            text += `*Name:* ${name} ${surname}\n`;
+            text += `*Grade:* ${grade}\n`;
+            text += `*Subjects of Interest:* ${subjects.join(", ")}\n\n`;
+            text += `I would like to register for the tutoring program. Please send me more information.`;
 
-        <div class="resource-card">
-          <div class="resource-icon">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <h3>APS Calculator</h3>
-          <p>Calculate your Admission Point Score (APS) to see which university programs you qualify for.</p>
-          <a href="https://vylexnexys.co.za/edTech/tools/apscalculator.html" target="_blank" rel="noopener noreferrer" class="resource-link">
-            Calculate APS <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Pathfinders Empowerment Hub. Empowering South African learners for a brighter future.</p>
-    </div>
-  </footer>
+            window.open(url, '_blank');
+        });
+    </script>
 
-  <script>
-    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Show loading state
-      const submitBtn = this.querySelector('.submit-btn');
-      const loading = submitBtn.querySelector('.loading');
-      const btnText = submitBtn.querySelector('span');
-      
-      loading.classList.add('show');
-      btnText.textContent = 'Preparing message...';
-      
-      // Get form data
-      const name = document.getElementById('name').value.trim();
-      const surname = document.getElementById('surname').value.trim();
-      const grade = document.getElementById('grade').value;
-      const subjects = Array.from(document.getElementById('subjects').selectedOptions).map(opt => opt.value);
-      const message = document.getElementById('message').value.trim();
-
-      // Validate required fields
-      if (!name || !surname || !grade || subjects.length === 0) {
-        alert('Please fill in all required fields.');
-        loading.classList.remove('show');
-        btnText.textContent = 'Send via WhatsApp';
-        return;
-      }
-
-      // Format WhatsApp message
-      const whatsappNumber = "27783284393";
-      let text = `🎓 *Pathfinders Education Program Registration*\n\n`;
-      text += `👤 *Name:* ${name} ${surname}\n`;
-      text += `📚 *Grade:* ${grade}\n`;
-      text += `📖 *Subjects:* ${subjects.join(", ")}\n`;
-      
-      if (message) {
-        text += `💬 *Message:* ${message}\n`;
-      }
-      
-      text += `\nI'm interested in joining the program. Please provide more information! 🚀`;
-
-      // Create WhatsApp URL
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-      
-      // Simulate processing delay for better UX
-      setTimeout(() => {
-        window.open(url, '_blank');
-        
-        // Reset button state
-        loading.classList.remove('show');
-        btnText.textContent = 'Send via WhatsApp';
-      }, 1000);
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Subject item click functionality
-    document.querySelectorAll('.subject-item').forEach(item => {
-      item.addEventListener('click', function() {
-        const subjectName = this.textContent.replace(/[^\w\s]/gi, '').trim();
-        const registerForm = document.getElementById('register');
-        registerForm.scrollIntoView({ behavior: 'smooth' });
-        
-        // Highlight the corresponding subject in the form
-        setTimeout(() => {
-          const subjectSelect = document.getElementById('subjects');
-          const options = Array.from(subjectSelect.options);
-          const matchingOption = options.find(opt => opt.value === subjectName);
-          if (matchingOption) {
-            matchingOption.selected = true;
-            subjectSelect.focus();
-          }
-        }, 500);
-      });
-    });
-  </script>
 </body>
+
 </html>
