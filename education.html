@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pathfinders Education Program | Subject Tutoring & Academic Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #faf9fa;
+      color: #181818;
+    }
+    header {
+      background: linear-gradient(to right, rgba(128,0,0,0.95), rgba(128,0,0,0.8));
+      padding: 4rem 1rem;
+      text-align: center;
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 {
+      color: #800000;
+      margin-bottom: 0.5rem;
+    }
+    .info {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "✓";
+      color: #800000;
+      margin-right: 0.5rem;
+    }
+    .form-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background: #800000;
+      color: white;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a00000;
+    }
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pathfinders Education Program</h1>
+    <p>Affordable, quality tutoring for South African learners — building brighter futures together.</p>
+  </header>
+
+  <main>
+    <section class="info">
+      <h2>Let's Learn Together! Build a Bright Future!</h2>
+      <p><strong>Weekly Schedule:</strong> 2 Sessions per Week (Only R50)</p>
+      <h3>Subjects Available:</h3>
+      <ul>
+        <li>Economics</li>
+        <li>Business Studies</li>
+        <li>Geography</li>
+        <li>Accounting</li>
+        <li>Life Sciences</li>
+        <li>Tourism</li>
+      </ul>
+      <p><strong>Organized by:</strong> Pathfinders Empowerment Hub</p>
+      <p><strong>Results-driven. Affordable. Quality Tutoring.</strong></p>
+    </section>
+
+    <section class="form-section">
+      <h2>Register or Enquire Now</h2>
+      <form id="whatsappForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required/>
+
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" required/>
+
+        <label for="grade">Grade</label>
+        <select id="grade" required>
+          <option value="">Select Grade</option>
+          <option value="Grade 8">Grade 8</option>
+          <option value="Grade 9">Grade 9</option>
+          <option value="Grade 10">Grade 10</option>
+          <option value="Grade 11">Grade 11</option>
+          <option value="Grade 12">Grade 12</option>
+        </select>
+
+        <label for="subjects">Subjects</label>
+        <select id="subjects" multiple required>
+          <option value="Economics">Economics</option>
+          <option value="Business Studies">Business Studies</option>
+          <option value="Geography">Geography</option>
+          <option value="Accounting">Accounting</option>
+          <option value="Life Sciences">Life Sciences</option>
+          <option value="Tourism">Tourism</option>
+        </select>
+
+        <label for="message">Additional Message</label>
+        <textarea id="message" rows="4"></textarea>
+
+        <button type="submit"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+      </form>
+
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> Asanda: 078 328 4393</p>
+        <p><i class="fas fa-envelope"></i> asanda@pathfindersempowerment.co.za</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let name = document.getElementById('name').value.trim();
+      let surname = document.getElementById('surname').value.trim();
+      let grade = document.getElementById('grade').value;
+      let subjects = Array.from(document.getElementById('subjects').selectedOptions).map(opt => opt.value).join(", ");
+      let message = document.getElementById('message').value.trim();
+
+      let whatsappNumber = "27783284393"; // Asanda's number in international format
+      let text = `Hello Asanda, I would like to register/enquire.\n\nName: ${name} ${surname}\nGrade: ${grade}\nSubjects: ${subjects}\nMessage: ${message}`;
+      let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
