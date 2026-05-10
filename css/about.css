@@ -1,0 +1,220 @@
+/* About Page Specific Styles */
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.mission,
+.vision {
+  background: linear-gradient(135deg, var(--white), var(--gray));
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--maroon);
+  height: 100%;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission:hover,
+.vision:hover {
+  transform: translateY(-5px);
+}
+
+.mission h3,
+.vision h3 {
+  color: var(--maroon);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.mission i,
+.vision i {
+  color: var(--maroon);
+  font-size: 1.5rem;
+}
+
+.pillars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.pillar {
+  background: linear-gradient(135deg, var(--white), var(--gray));
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--maroon);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pillar h3 {
+  color: var(--maroon);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pillar i {
+  color: var(--maroon);
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.approach-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.approach-list li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.approach-list li::before {
+  content: "✓";
+  color: var(--maroon);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  top: 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.team-member {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+.team-info {
+  padding: 2rem;
+}
+
+.team-info h3 {
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.team-info p:first-of-type {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #666;
+}
+
+.strategic-plan-list {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: plan-counter;
+}
+
+.strategic-plan-list li {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 4rem; /* Ensure enough space for the custom counter */
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.strategic-plan-list li::before {
+  counter-increment: plan-counter;
+  content: counter(plan-counter);
+  color: var(--white);
+  background: linear-gradient(135deg, var(--maroon), #a00000);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 992px) {
+  .mission-vision {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pillars-container {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mission,
+  .vision,
+  .pillar {
+    padding: 2rem 1.5rem;
+  }
+  
+  .strategic-plan-list li {
+    padding-left: 3.5rem;
+  }
+
+  .strategic-plan-list li::before {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}
