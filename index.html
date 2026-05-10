@@ -36,60 +36,30 @@
   <link rel="icon" href="/assets/images/pathfinders-logo.jpg" type="image/jpeg" />
 
   <!-- Fonts and Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://pathfindersempowerment.co.za/" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Pathfinders Empowerment Hub",
-    "description": "Empowering South African youth through leadership, entrepreneurship, and academic excellence programs",
-    "url": "https://pathfindersempowerment.co.za",
-    "logo": "https://pathfindersempowerment.co.za/assets/images/pathfinders-logo.jpg",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+27-78-328-4393",
-      "contactType": "Customer Service",
-      "email": "info@pathfindersempowerment.co.za",
-      "areaServed": "ZA",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Durban",
-      "addressRegion": "KwaZulu-Natal",
-      "addressCountry": "ZA"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Asanda Mthethwa"
-    }
-  }
-  </script>
-
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/home.css" />
+
+  <!-- CSS Placeholder -->
+
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
         <img src="./assets/images/pathfinders-logo.jpg" alt="Pathfinders Empowerment Hub Logo" class="logo-image">
         Pathfinders
       </a>
-      <button class="mobile-toggle" aria-label="Toggle navigation menu">☰</button>
+      <button class="mobile-toggle">☰</button>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
@@ -99,18 +69,16 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="header-overlay"></div>
     <div class="container">
-      <h1 class="fade-in-up">Pathfinders Empowerment Hub</h1>
-      <p class="fade-in-up delay-1">Building a generation of values-driven, opportunity-ready youth across South Africa</p>
-      <a href="get-involved.html" class="cta-btn header-cta fade-in-up delay-2">Join the Movement <i class="fas fa-arrow-right"></i></a>
+      <h1>Pathfinders Empowerment Hub</h1>
+      <p>Building a generation of values-driven, opportunity-ready youth across South Africa</p>
     </div>
   </header>
 
   <!-- Main Content -->
   <main class="container section-padding">
     <!-- Vision & Mission Section -->
-    <section id="vision" class="content-section reveal">
+    <section id="vision" class="content-section">
       <h2 class="section-title">Our Vision</h2>
       <p class="section-text">To build a generation of empowered, values-driven and opportunity-ready youth across South
         Africa and beyond.</p>
@@ -123,7 +91,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="content-section about-section reveal">
+    <section id="about" class="content-section about-section">
       <div>
         <h2 class="section-title">About Us</h2>
         <p class="section-text">
@@ -143,10 +111,10 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="content-section reveal">
+    <section id="services" class="content-section">
       <h2 class="section-title">What We Do</h2>
       <div class="services-grid">
-        <div class="service-card reveal">
+        <div class="service-card">
           <h3><i class="fas fa-bullseye"></i> Youth Development Programs</h3>
           <ul>
             <li>School-based empowerment sessions</li>
@@ -155,7 +123,7 @@
             <li>Life skills & growth mindsets training</li>
           </ul>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card">
           <h3><i class="fas fa-lightbulb"></i> Entrepreneurship & Skills Training</h3>
           <ul>
             <li>Small business and startup development</li>
@@ -164,7 +132,7 @@
             <li>Problem-solving tools and techniques</li>
           </ul>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card">
           <h3><i class="fas fa-graduation-cap"></i> Academic Excellence Support</h3>
           <ul>
             <li>Study skills & performance coaching</li>
@@ -173,7 +141,7 @@
             <li>Community engagement programs</li>
           </ul>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card">
           <h3><i class="fas fa-handshake"></i> Partnership & Collaboration</h3>
           <ul>
             <li>Engaging schools, NGOs, and businesses</li>
@@ -185,35 +153,8 @@
       </div>
     </section>
 
-    <!-- Impact Counter Section -->
-    <section class="content-section reveal">
-      <h2 class="section-title">Our Impact</h2>
-      <div class="impact-grid">
-        <div class="impact-card">
-          <i class="fas fa-users"></i>
-          <span class="impact-number" data-target="2500">0</span>
-          <span class="impact-label">Youth Reached</span>
-        </div>
-        <div class="impact-card">
-          <i class="fas fa-school"></i>
-          <span class="impact-number" data-target="45">0</span>
-          <span class="impact-label">Schools Visited</span>
-        </div>
-        <div class="impact-card">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <span class="impact-number" data-target="150">0</span>
-          <span class="impact-label">Workshops Delivered</span>
-        </div>
-        <div class="impact-card">
-          <i class="fas fa-handshake"></i>
-          <span class="impact-number" data-target="30">0</span>
-          <span class="impact-label">Partners</span>
-        </div>
-      </div>
-    </section>
-
     <!-- Founder Section -->
-    <section id="founder" class="content-section founder-section reveal">
+    <section id="founder" class="content-section founder-section">
       <h2 class="section-title">From Our Founder</h2>
       <div class="founder-message">
         <p>
@@ -222,12 +163,13 @@
         </p>
         <span class="founder-name">Asanda Mthethwa</span>
         <p><i class="fas fa-envelope"></i> Asanda@pathfindersempowerment.co.za</p>
+
         <span class="founder-title">Founder & CEO</span>
       </div>
     </section>
 
     <!-- Call To Action -->
-    <section class="cta-section reveal">
+    <section class="cta-section">
       <h2>Ready to Make a Difference?</h2>
       <p>Join us in our mission to empower the next generation of leaders.</p>
       <a href="get-involved.html" class="cta-btn">Get Involved <i class="fas fa-arrow-right"></i></a>
@@ -242,9 +184,12 @@
           <h3>Pathfinders Hub</h3>
           <p>Building a generation of values-driven, opportunity-ready youth across South Africa.</p>
           <div class="social-icons">
-            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" style="text-decoration: none; color: inherit;"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" style="text-decoration: none; color: inherit;"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" style="text-decoration: none; color: inherit;"><i
+                class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-column">
@@ -255,21 +200,23 @@
         </div>
         <div class="footer-column">
           <h3>Quick Links</h3>
-          <p><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></p>
-          <p><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></p>
-          <p><a href="education.html"><i class="fas fa-chevron-right"></i> Education</a></p>
-          <p><a href="get-involved.html"><i class="fas fa-chevron-right"></i> Get Involved</a></p>
+          <p><a href="index.html" style="color: white; text-decoration: none;"><i class="fas fa-chevron-right"></i>
+              Home</a></p>
+          <p><a href="about.html" style="color: white; text-decoration: none;"><i class="fas fa-chevron-right"></i>
+              About Us</a></p>
+          <p><a href="education.html" style="color: white; text-decoration: none;"><i class="fas fa-chevron-right"></i>
+              Education</a></p>
+          <p><a href="get-involved.html" style="color: white; text-decoration: none;"><i
+                class="fas fa-chevron-right"></i> Get Involved</a></p>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Pathfinders Empowerment Hub. All rights reserved.</p>
-        <p class="developer">Powered by <a href="https://vylexnexys.co.za">Vylex Nexys</a></p>
+        <p class="developer">Powered by <a href="https://vylex.co.za"
+            style="color: #e71616; text-decoration: dotted;">Vylex</a></p>
       </div>
     </div>
   </footer>
-
-  <!-- Back to Top -->
-  <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
 
   <script>
     // Mobile menu toggle
@@ -278,14 +225,12 @@
 
     mobileToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
     });
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        mobileToggle.textContent = '☰';
       });
     });
 
@@ -293,12 +238,10 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
+
         const targetId = this.getAttribute('href');
-        if (targetId === '#') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          return;
-        }
         const targetElement = document.querySelector(targetId);
+
         if (targetElement) {
           window.scrollTo({
             top: targetElement.offsetTop - 70,
@@ -307,70 +250,6 @@
         }
       });
     });
-
-    // Navbar shrink on scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // Back to Top
-    const backToTop = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('active');
-      } else {
-        backToTop.classList.remove('active');
-      }
-    });
-
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-      revealElements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          el.classList.add('revealed');
-        }
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-
-    // Impact counter animation
-    const counters = document.querySelectorAll('.impact-number');
-    let countersAnimated = false;
-
-    const animateCounters = () => {
-      if (countersAnimated) return;
-      const section = document.querySelector('.impact-grid');
-      if (!section) return;
-      const top = section.getBoundingClientRect().top;
-      if (top < window.innerHeight - 50) {
-        countersAnimated = true;
-        counters.forEach(counter => {
-          const target = +counter.getAttribute('data-target');
-          const increment = target / 80;
-          let current = 0;
-          const update = () => {
-            current += increment;
-            if (current < target) {
-              counter.textContent = Math.ceil(current).toLocaleString();
-              requestAnimationFrame(update);
-            } else {
-              counter.textContent = target.toLocaleString() + '+';
-            }
-          };
-          update();
-        });
-      }
-    };
-    window.addEventListener('scroll', animateCounters);
-    animateCounters();
   </script>
 </body>
 
