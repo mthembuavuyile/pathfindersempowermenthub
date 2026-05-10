@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Pathfinders Empowerment Hub</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Explore our gallery showcasing Pathfinders Empowerment Hub's youth development programs, workshops, and community impact across South Africa." />
+    <meta name="keywords" content="Pathfinders Gallery, Youth Programs, Workshops, Community Impact, Leadership Training, South Africa" />
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <style>
+        :root {
+            --maroon: #800000;
+            --black: #181818;
+            --white: #fff;
+            --gray: #faf9fa;
+            --light-maroon: rgba(128, 0, 0, 0.1);
+        }
+        
+        * { 
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background: var(--gray);
+            color: var(--black);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            color: var(--maroon);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 4px;
+            background-color: var(--maroon);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--black);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--maroon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--maroon);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links li a:hover {
+            color: var(--maroon);
+        }
+        
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(to right, rgba(128, 0, 0, 0.95), rgba(128, 0, 0, 0.8));
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            letter-spacing: 1px;
+        }
+        
+        /* Gallery Filters */
+        .gallery-filters {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--maroon);
+            color: var(--maroon);
+            padding: 0.7rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--maroon);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-item {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, var(--light-maroon), #f0f0f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--maroon);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(128, 0, 0, 0.1) 0%, 
+                rgba(128, 0, 0, 0.05) 50%, 
+                rgba(128, 0, 0, 0.1) 100%);
+        }
+        
+        .gallery-image i {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-image .image-label {
+            position: relative;
+            z-index: 1;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .gallery-content {
+            padding: 1.5rem;
+        }
+        
+        .gallery-content h3 {
+            color: var(--maroon);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .gallery-content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .gallery-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        
+        .gallery-category {
+            background: var(--light-maroon);
+            color: var(--maroon);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            padding: 2rem;
+            width: 90%;
+            max-width: 800px;
+            background: var(--white);
+            border-radius: 12px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: #aaa;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close:hover {
+            color: var(--maroon);
+        }
+        
+        .modal-header h2 {
+            color: var(--maroon);
+            margin-bottom: 1rem;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, var(--light-maroon), #f0f0f0);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--maroon);
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--light-maroon), #f8f8f8);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--maroon);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-weight: 500;
+            color: #666;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                width: 100%;
+                background: var(--black);
+                align-items: center;
+                padding: 2rem 0;
+                transition: 0.3s;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+                padding: 1.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .filter-btn {
+                display: block;
+                width: 80%;
+                margin: 0.5rem auto;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-image">P</div>
+                Pathfinders
+            </a>
+            <button class="mobile-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Capturing moments of transformation, growth, and empowerment</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container section-padding">
+        
+        <!-- Gallery Filters -->
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="workshops">Workshops</button>
+            <button class="filter-btn" data-filter="school-visits">School Visits</button>
+            <button class="filter-btn" data-filter="leadership">Leadership Training</button>
+            <button class="filter-btn" data-filter="community">Community Events</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Workshop Items -->
+            <div class="gallery-item" data-category="workshops" data-title="Entrepreneurship Workshop" 
+                 data-description="Interactive session teaching young minds the fundamentals of starting and running a business, including market research, business planning, and financial management.">
+                <div class="gallery-image">
+                    <i class="fas fa-lightbulb"></i>
+                    <div class="image-label">Entrepreneurship Workshop</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Entrepreneurship Workshop</h3>
+                    <p>Teaching young minds business fundamentals and innovation</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Workshops</span>
+                        <span><i class="fas fa-calendar"></i> March 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="workshops" data-title="Financial Literacy Session"
+                 data-description="Comprehensive financial education covering budgeting, saving, investing, and understanding financial products to build a strong financial foundation.">
+                <div class="gallery-image">
+                    <i class="fas fa-coins"></i>
+                    <div class="image-label">Financial Literacy</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Financial Literacy Session</h3>
+                    <p>Building financial knowledge for a secure future</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Workshops</span>
+                        <span><i class="fas fa-calendar"></i> February 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- School Visit Items -->
+            <div class="gallery-item" data-category="school-visits" data-title="Durban High School Assembly"
+                 data-description="Inspiring assembly session with 500+ students focusing on goal setting, academic excellence, and personal development strategies.">
+                <div class="gallery-image">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="image-label">School Assembly</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Durban High School Assembly</h3>
+                    <p>Motivational session with 500+ students on academic excellence</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">School Visits</span>
+                        <span><i class="fas fa-calendar"></i> April 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="school-visits" data-title="Career Guidance Session"
+                 data-description="Interactive career guidance helping students explore various career paths, understand skill requirements, and plan their educational journey.">
+                <div class="gallery-image">
+                    <i class="fas fa-compass"></i>
+                    <div class="image-label">Career Guidance</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Career Guidance Session</h3>
+                    <p>Helping students navigate their future career paths</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">School Visits</span>
+                        <span><i class="fas fa-calendar"></i> March 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership Training Items -->
+            <div class="gallery-item" data-category="leadership" data-title="Youth Leadership Bootcamp"
+                 data-description="Intensive 3-day leadership development program covering communication skills, team building, decision making, and strategic thinking.">
+                <div class="gallery-image">
+                    <i class="fas fa-users"></i>
+                    <div class="image-label">Leadership Bootcamp</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Youth Leadership Bootcamp</h3>
+                    <p>3-day intensive program developing future leaders</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Leadership</span>
+                        <span><i class="fas fa-calendar"></i> May 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="leadership" data-title="Communication Skills Workshop"
+                 data-description="Focused training on public speaking, presentation skills, active listening, and effective communication strategies for personal and professional success.">
+                <div class="gallery-image">
+                    <i class="fas fa-microphone"></i>
+                    <div class="image-label">Communication Skills</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Communication Skills Workshop</h3>
+                    <p>Building confidence through effective communication</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Leadership</span>
+                        <span><i class="fas fa-calendar"></i> April 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Events -->
+            <div class="gallery-item" data-category="community" data-title="Community Clean-Up Drive"
+                 data-description="Youth-led environmental initiative bringing together students and community members to clean local areas and promote environmental awareness.">
+                <div class="gallery-image">
+                    <i class="fas fa-leaf"></i>
+                    <div class="image-label">Community Clean-Up</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Community Clean-Up Drive</h3>
+                    <p>Youth-led environmental initiative making a difference</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Community</span>
+                        <span><i class="fas fa-calendar"></i> June 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="community" data-title="Youth Mentorship Program"
+                 data-description="Ongoing mentorship program connecting experienced professionals with young people to provide guidance, support, and career development opportunities.">
+                <div class="gallery-image">
+                    <i class="fas fa-handshake"></i>
+                    <div class="image-label">Mentorship Program</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Youth Mentorship Program</h3>
+                    <p>Connecting young people with experienced mentors</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Community</span>
+                        <span><i class="fas fa-calendar"></i> Ongoing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="workshops" data-title="Digital Skills Training"
+                 data-description="Modern digital literacy workshop covering computer basics, internet safety, social media awareness, and basic programming concepts.">
+                <div class="gallery-image">
+                    <i class="fas fa-laptop-code"></i>
+                    <div class="image-label">Digital Skills</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Digital Skills Training</h3>
+                    <p>Preparing youth for the digital economy</p>
+                    <div class="gallery-meta">
+                        <span class="gallery-category">Workshops</span>
+                        <span><i class="fas fa-calendar"></i> May 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h2 class="section-title">Our Impact in Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Youth Reached</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Schools Visited</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Workshops Conducted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Improved Confidence</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-image" id="modalImage"></div>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Pathfinders Empowerment Hub. All rights reserved.</p>
+            <p class="developer">Powered by <a href="https://vylexnexys.co.za" style="color: #e71616; text-decoration: dotted;">Vylex Nexys</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Gallery filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('galleryModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalImage = document.getElementById('modalImage');
+        const modalDescription = document.getElementById('modalDescription');
+        const closeBtn = document.querySelector('.close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const title = item.getAttribute('data-title');
+                const description = item.getAttribute('data-description');
+                const imageContent = item.querySelector('.gallery-image').innerHTML;
+
+                modalTitle.textContent = title;
+                modalImage.innerHTML = imageContent;
+                modalDescription.textContent = description;
+                modal.style.display = 'block';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
